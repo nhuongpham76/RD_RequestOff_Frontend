@@ -1,5 +1,5 @@
 <template>
-    <div>This is footer.</div>
+  <div>This is a footer component</div>
 </template>
 
 <script>

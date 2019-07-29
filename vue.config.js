@@ -7,10 +7,10 @@ module.exports = {
   },
   configureWebpack: {
   },
-  pluginOptions: {
-    "style-resources-loader": {
-      preProcessor: "scss",
-      patterns: [path.resolve(__dirname, "./src/assets/css/global.scss")]
-    }
-  }
+  // pluginOptions: {
+  //   "style-resources-loader": {
+  //     preProcessor: "scss",
+  //     patterns: [path.resolve(__dirname, "./src/assets/css/global.scss")]
+  //   }
+  // }
 }

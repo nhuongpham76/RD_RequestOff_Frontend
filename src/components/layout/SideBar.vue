@@ -1,5 +1,5 @@
 <template>
-    <div>This is side bar.</div>
+  <div>This is a sidebar component</div>
 </template>
 
 <script>

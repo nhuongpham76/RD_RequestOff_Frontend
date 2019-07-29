@@ -1,10 +1,10 @@
 <template>
-  <div>This is a header component</div>
+  <div>This is not found</div>
 </template>
 
 <script>
   export default {
-    name: "Header"
+    name: "NotFound"
   }
 </script>
 

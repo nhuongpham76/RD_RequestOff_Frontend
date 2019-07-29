@@ -1,10 +1,10 @@
 <template>
-  <div>This is a header component</div>
+  <div>This is dashboard page.</div>
 </template>
 
 <script>
   export default {
-    name: "Header"
+    name: "Dashboard",
   }
 </script>
 

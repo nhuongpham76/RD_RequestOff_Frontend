@@ -1,0 +1,9 @@
+export const  STATUS_CODE = {
+    SUCCESS: 200,
+    SUCCESS_CREATE: 201,
+    ERROR: 500,
+    FORBIDDEN: 403,
+    NOT_FOUND: 404,
+    VALIDATION_FAIL: 422,
+    UNAUTHORIZED: 401,
+};

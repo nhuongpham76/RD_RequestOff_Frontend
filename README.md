@@ -1,29 +1,16 @@
-# hello-world
+# Request off
 
 ## Project setup
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Create environment file
 ```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
+cp .env.example .env
 ```
 
-### Run your tests
+### Compiles and minifies
 ```
-yarn run test
+yarn run watch or yarn run dev
 ```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
