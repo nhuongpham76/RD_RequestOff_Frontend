@@ -1,27 +1,27 @@
 import Vue from 'vue';
+import VeeValidate from 'vee-validate';
 import App from './App.vue';
 import router from './router';
 import store from './store';
 import ApiService from './service/ApiService';
 import authMiddleware from './middleware/auth';
 
+// init vue-awesome-notifications library
 import VueAWN from "vue-awesome-notifications";
 let options = {
   position: 'top-right',
 }
 Vue.use(VueAWN, options);
 
-
+// init vue-i18n library
 import VueI18n from 'vue-i18n';
-import viMessage from './lang/vi';
-import enMessage from './lang/en';
-import {TokenService} from "./service/StorageService";
+import viLabels from './lang/vi/labels';
+import enLabels from './lang/en/labels';
 const lang = localStorage.getItem('language');
-
 Vue.use(VueI18n);
 const messages = {
-  vi: viMessage,
-  en: enMessage,
+  vi: viLabels,
+  en: enLabels,
 }
 const i18n = new VueI18n({
   locale: lang,
@@ -29,8 +29,21 @@ const i18n = new VueI18n({
   fallbackLocale: 'en',
 });
 
+// init vee-validate library
+import viValidation from './lang/en/validation';
+import enValidation from 'vee-validate/dist/locale/en';
+Vue.use(VeeValidate, {
+  i18n,
+  dictionary: {
+    vi: viValidation,
+    en: enValidation,
+  }
+});
+
+// init axios library
 window.axios = require('axios');
-ApiService.init(process.env.MIX_BASE_API_URI);
+ApiService.setApiBaseUrl(process.env.MIX_BASE_API_URI);
+ApiService.setToken();
 
 Vue.config.productionTip = false;
 
