@@ -130,7 +130,7 @@
 
   .alert-validation {
     color: red;
-    margin-top: -33px;
+    margin-top: -30px;
     font-size: 14px;
     font-family: Arial;
   }

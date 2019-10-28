@@ -7,8 +7,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/index.html"><strong><i class="icon fa fa-calendar"></i> REQUEST OFF</strong></a>
-
+      <router-link class="navbar-brand" :to="{name: 'dashboard'}">
+        <strong><i class="icon fa fa-calendar"></i> REQUEST OFF</strong>
+      </router-link>
       <div id="sideNav" href="">
         <i class="fa fa-bars icon"></i>
       </div>

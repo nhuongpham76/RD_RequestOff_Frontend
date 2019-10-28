@@ -30,8 +30,8 @@ const i18n = new VueI18n({
 });
 
 // init vee-validate library
-import viValidation from './lang/en/validation';
-import enValidation from 'vee-validate/dist/locale/en';
+import viValidation from './lang/vi/validation';
+import enValidation from './lang/en/validation';
 Vue.use(VeeValidate, {
   i18n,
   dictionary: {
