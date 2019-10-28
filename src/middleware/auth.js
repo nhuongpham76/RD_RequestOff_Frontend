@@ -4,17 +4,18 @@ import router from "../router";
 export default function () {
   router.beforeEach((to, from, next) => {
     let isAuthenticated = TokenService.getToken();
-    let pathName = to.name;
-    if (!isAuthenticated) {
-      if (pathName == 'login') {
-        next();
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+      if (!isAuthenticated) {
+        next({name: 'sign-up'});
       } else {
-        next({name: 'login'});
+        next();
       }
-    } else if (pathName == 'login' && isAuthenticated) {
-      next({name: 'dashboard'});
     } else {
-      next();
+      if (isAuthenticated && to.name == 'sign-up') {
+        next({name: 'dashboard'});
+      } else {
+        next();
+      }
     }
   })
 }

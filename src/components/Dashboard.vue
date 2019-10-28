@@ -1,13 +1,7 @@
 <template>
   <div id="page-wrapper">
     <div class="header">
-      <h1 class="page-header">
-        Dashboard <small>Welcome John Doe</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li class="active">Dashboard</li>
-      </ol>
-
+      <breadcrumbs subject_name="dashboard" :breadcrumbs="[{name: 'dashboard'}]"></breadcrumbs>
     </div>
     <div id="page-inner">
 
@@ -93,10 +87,14 @@
 </template>
 
 <script>
+  import Breadcrumbs from './layout/Breadcrumbs';
   export default {
     name: "Dashboard",
+    components: {
+      Breadcrumbs
+    },
     created: function () {
-    }
+    },
   }
 </script>
 

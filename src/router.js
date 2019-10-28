@@ -1,10 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Login from './components/authenticate/Login';
+import ForgetPassword from './components/authenticate/ForgetPassword';
 import Master from './components/layout/Master';
 import NotFound from './components/NotFound';
 import Dashboard from './components/Dashboard';
 import ListUser from './components/users/List';
+import CreateUser from './components/users/Create';
 
 Vue.use(Router);
 export default new Router({
@@ -13,8 +15,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'login',
+      name: 'sign-up',
       component: Login,
+      meta: {
+        requiresAuth: false,
+      },
+    },
+    {
+      path: '/password/email',
+      name: 'forget-password',
+      component: ForgetPassword,
+      meta: {
+        requiresAuth: false,
+      },
     },
     {
       path: '/',
@@ -26,16 +39,24 @@ export default new Router({
           component: Dashboard,
         },
         {
-          path: 'users',
-          name: 'users',
+          path: 'users/list',
+          name: 'list-users',
           component: ListUser,
+        },
+        {
+          path: 'users/create',
+          name: 'create-user',
+          component: CreateUser,
         },
         {
           path: '*',
           name: 'not-found',
           component: NotFound,
         },
-      ]
+      ],
+      meta: {
+        requiresAuth: true,
+      },
     },
   ],
   redirect: {

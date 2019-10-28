@@ -1,5 +1,5 @@
 <template>
-  <div>This is not found</div>
+  <div style="color: white">This is not found</div>
 </template>
 
 <script>

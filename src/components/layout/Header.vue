@@ -7,8 +7,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/index.html"><strong><i class="icon fa fa-calendar"></i> REQUEST OFF</strong></a>
-
+      <router-link class="navbar-brand" :to="{name: 'dashboard'}">
+        <strong><i class="icon fa fa-calendar"></i> REQUEST OFF</strong>
+      </router-link>
       <div id="sideNav" href="">
         <i class="fa fa-bars icon"></i>
       </div>
@@ -210,12 +211,15 @@
           <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
         </a>
         <ul class="dropdown-menu dropdown-user">
-          <li><a href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/index.html#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+          <li>
+            <a href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/index.html#"><i class="fa fa-user fa-fw"></i> {{ $t('profile') }}</a>
           </li>
-          <li><a href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/index.html#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+          <li>
+            <a @click="changeLanguage" style="cursor: pointer"><i class="fa fa-language fa-fw"></i> {{$t('common.select_lang')}}</a>
           </li>
           <li class="divider"></li>
-          <li><a href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/index.html#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+          <li>
+            <a href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/index.html#"><i class="fa fa-sign-out fa-fw"></i> {{$t('logout')}}</a>
           </li>
         </ul>
         <!-- /.dropdown-user -->
@@ -227,7 +231,20 @@
 
 <script>
   export default {
-    name: "Header"
+    name: "Header",
+    data() {
+      return {
+
+      }
+    },
+    methods: {
+      changeLanguage() {
+        let currentLanguage = localStorage.getItem('language') ? localStorage.getItem('language') : 'en';
+        let lang = currentLanguage == 'en' ? 'vi' : 'en';
+        localStorage.setItem('language', lang);
+        this.$root.$i18n.locale = lang;
+      },
+    }
   }
 </script>
 
