@@ -26,8 +26,8 @@ export default new Router({
           component: Dashboard,
         },
         {
-          path: 'users',
-          name: 'users',
+          path: 'users/list',
+          name: 'user-list',
           component: ListUser,
         },
         {

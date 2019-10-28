@@ -5,5 +5,85 @@
 .title-list {
     border-bottom: 1px solid #e7ecf1;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
+}
+
+.button {
+    color: #FFFFFF;
+    background: #32c5d2;
+    border-color: #18666d;
+    border: none;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-family: Arial;
+}
+
+.number-column {
+    width: 50px;
+    text-align: center;
+}
+
+.number-value {
+    text-align: center;
+}
+
+.action-button {
+    text-decoration: none !important;
+    font-size: 13px;
+}
+
+.show-button {
+    border: 1px solid #32c5d2;
+    background: none;
+    color: #32c5d2;
+    padding: 6px 10px;
+}
+
+.show-button:hover {
+    background: #32c5d2;
+    color: #ffffff;
+}
+.edit-button {
+    border: 1px solid #3598dc;
+    background: none;
+    color: #3598dc;
+    padding: 6px 10px;
+}
+
+.edit-button:hover {
+    background: #32c5d2;
+    color: #ffffff;
+}
+
+.delete-button {
+    border: 1px solid #e7505a;
+    background: none;
+    color: #e7505a;
+    padding: 6px 10px;
+}
+
+.delete-button:hover {
+    background: #e7505a;
+    color: #ffffff;
+}
+
+.action-column {
+    width: 260px;
+}
+
+.pagination-custom {
+    margin: 0px;
+}
+
+.no-radius {
+    border-radius: 0px !important;
+}
+
+.table tr td {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+#sideNav i:hover {
+    color: #32c5d2 !important;
 }

@@ -26,12 +26,9 @@
                 <div class="col-md-12">
                   <div class="title-list">
                     <div class="row">
-                      <div class="col-md-6 color-green"><i class="fa fa-users"></i> USER LIST</div>
+                      <div class="col-md-6 color-green" style="padding-bottom: 5px"><i class="fa fa-users"></i> USER LIST</div>
                       <div class="col-md-6 text-right">
-                        <button class="" style="color: #FFFFFF;
-    background: #1f858e;
-    border-color: #18666d;
-    border: none;">Create new</button>
+                        <button class="button" style=""><i class="fa fa-plus"></i> Create new</button>
                       </div>
                     </div>
                   </div>
@@ -42,35 +39,30 @@
               <div class="table-responsive">
                 <table class="table table-striped table-bordered table-hover">
                   <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                  </tr>
+                    <tr>
+                      <th class="number-column">No</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                      <th class="action-column">Action</th>
+                    </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
+                    <tr>
+                      <td class="number-value">1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>
+                        <a class="action-button show-button"><i class="fa fa-search"></i><span class="hidden-xs">Show</span></a>
+                        <a class="action-button edit-button"><i class="fa fa-edit"></i><span class="hidden-xs">Edit</span></a>
+                        <a class="action-button delete-button"><i class="fa fa-times"></i><span class="hidden-xs">Delete</span></a>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
+              <pagination></pagination>
             </div>
           </div>
           <!-- End  Kitchen Sink -->
@@ -82,8 +74,12 @@
 </template>
 
 <script>
+  import Pagination from '../layout/Pagination';
   export default {
-    name: "List"
+    name: "List",
+    components: {
+      Pagination
+    }
   }
 </script>
 

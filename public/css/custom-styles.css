@@ -296,7 +296,7 @@ color: #fff;
 }
  .blue {background-color: #FFFFFF;color: #002A4C;}
   .red {
-background-color: #FB6E51;
+background-color: #32c5d2;
 color:#fff;
 }
   .brown {
@@ -428,7 +428,7 @@ font-size: 14px;
     MENU STYLES    
 ------------------------------------------------*/
 div#sideNav:hover {
-    color: #F09B22;
+    color: #32c5d2;
 }
 .user-image {
     margin: 25px auto;

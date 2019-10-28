@@ -3,11 +3,11 @@
     <div class="sidebar-collapse">
       <ul class="nav" id="main-menu">
 
-        <li>
-          <router-link :to="{ name: 'dashboard'}" class="active-menu"><i class="fa fa-dashboard"></i>Dashboard</router-link>
+        <li @click="clickCat('dashboard')">
+          <router-link :to="{ name: 'dashboard'}" :class="currentRouteName == 'dashboard' ? 'active-menu' : ''"><i class="fa fa-dashboard"></i>Dashboard</router-link>
         </li>
-        <li>
-          <router-link :to="{ name: 'users'}"><i class="fa fa-users"></i>Users</router-link>
+        <li @click="clickCat('user-list')">
+          <router-link :to="{ name: 'user-list'}" :class="currentRouteName == 'user-list' ? 'active-menu' : ''"><i class="fa fa-users"></i>Users</router-link>
         </li>
         <li>
           <a href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
@@ -74,7 +74,17 @@
 
 <script>
   export default {
-    name: "SideBar"
+    name: "SideBar",
+    data: function () {
+      return {
+        currentRouteName: 'dashboard',
+      }
+    },
+    methods: {
+      clickCat: function (routeName) {
+        this.currentRouteName = routeName;
+      }
+    }
   }
 </script>
 
