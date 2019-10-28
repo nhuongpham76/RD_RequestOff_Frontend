@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="wrapper">
     <header-component></header-component>
     <sidebar-component></sidebar-component>
     <router-view/>

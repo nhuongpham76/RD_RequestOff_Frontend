@@ -4,6 +4,7 @@ import Login from './components/authenticate/Login';
 import Master from './components/layout/Master';
 import NotFound from './components/NotFound';
 import Dashboard from './components/Dashboard';
+import ListUser from './components/users/List';
 
 Vue.use(Router);
 export default new Router({
@@ -23,6 +24,11 @@ export default new Router({
           path: 'dashboard',
           name: 'dashboard',
           component: Dashboard,
+        },
+        {
+          path: 'users',
+          name: 'users',
+          component: ListUser,
         },
         {
           path: '*',

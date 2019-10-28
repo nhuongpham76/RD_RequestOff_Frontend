@@ -47,7 +47,7 @@ ApiService.setToken();
 
 Vue.config.productionTip = false;
 
-authMiddleware();
+// authMiddleware();
 
 new Vue({
   el: '#app',
